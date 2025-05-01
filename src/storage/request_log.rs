@@ -15,19 +15,7 @@ pub struct CapturedRequest {
 }
 
 impl CapturedRequest {
-    pub fn new(method: &str, url: &str) -> Self {
-        Self {
-            id: Uuid::new_v4().to_string(),
-            method: method.to_string(),
-            url: url.to_string(),
-            headers: HashMap::new(),
-            body: String::new(),
-            authorization: None,
-            timestamp: Utc::now(),
-        }
-    }
-
-    pub fn new_with_details(
+    pub fn new(
         method: &str,
         url: &str,
         headers: HashMap<String, String>,

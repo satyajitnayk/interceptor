@@ -1,5 +1,6 @@
 pub mod handler;
 pub mod tls;
+pub mod parser;
 
 use crate::storage::request_log::RequestLog;
 use std::sync::Arc;
